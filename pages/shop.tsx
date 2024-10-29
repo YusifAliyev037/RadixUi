@@ -1,3 +1,5 @@
+import Cards from '@/components/Card'
+import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import MetaSeo from '@/utils/MetaSeo'
 import Head from 'next/head'
@@ -12,6 +14,14 @@ function shop() {
   </Head>
   <div>
     <Header/>
+    <div className='mt-20 mx-32'>
+      <h1 className='font-times text-mainColor text-4xl mb-10'>Shop</h1>
+      <hr className='mb-20'/>
+      <Cards/>
+    </div>
+  </div>
+  <div className='mt-20'>
+    <Footer/>
   </div>
  </>
   )

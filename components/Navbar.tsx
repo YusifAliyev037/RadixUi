@@ -1,11 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
-import { Inter } from "next/font/google";
 import { useRouter } from 'next/router';
 import { Box } from '@radix-ui/themes';
 
-const inter = Inter({ subsets: ["latin"] });
 
 interface Props {
   hidden?: boolean;
@@ -16,7 +12,7 @@ export const Navbar = ({
   hidden = true,
   onClickClose
 }: Props) => {
-  const { push, asPath } = useRouter()
+  const { push,  } = useRouter()
 
 
   
@@ -31,13 +27,13 @@ export const Navbar = ({
             onClick={onClickClose}
             className="mb-10 right-5 sm:left-0"
           >
-            <Image
+            {/* <Image
               className="rounded-full absolute sm:left-0 top-9 w-7 h-7 cursor-pointer"
               alt="close-icon"
               height={10}
               width={10}
               src='/blackClose.svg'
-            />
+            /> */}
           </button>
         </Box>
         
