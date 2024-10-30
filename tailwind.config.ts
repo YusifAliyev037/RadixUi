@@ -10,7 +10,9 @@ const config: Config = {
     colors:{
       mainColor:"#025048",
       white:"#ffff",
-      black:"#000"
+      black:"#000",
+      gray:"#CCC",
+      forum:"#F1F4F1"
     },
     extend: {
       colors: {
