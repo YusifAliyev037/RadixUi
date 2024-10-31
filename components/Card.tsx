@@ -1,7 +1,9 @@
+import { fillData } from "@/redux/global/globalSlice";
 import {  Card,  Inset, Select, Strong, Text } from "@radix-ui/themes";
 import Image from "next/image";
 import React from 'react'
 import { SlBasket } from "react-icons/sl";
+import { useDispatch } from "react-redux";
 
 const products = [
     {id:1,img:"/cup.jpg", name:'Ceramic Cup',  price:'$237.00', disPrice:'$189.00', desc:'The best Ceramic Cup'},
@@ -18,13 +20,21 @@ const products = [
 ]
 
 function Cards() {
+
+    const dispatch = useDispatch()
+
+    const handleAddToCart = (item: any) => {
+        const dataToDispatch = { id: item.id, name: item.name, price: item.price }; // or use `{...item}` if you've updated the Redux slice to accept objects
+        console.log("Adding to cart:", dataToDispatch); // Log the item data being added
+        dispatch(fillData(dataToDispatch));
+    };
   return (
     <>
     <div  className="flex flex-wrap gap-4 justify-center " >
     {products.map((item, index) => (
         <Card key={index} size="2" mb="4" >
           <Inset clip="padding-box" side="top" pb="current" className="relative">
-          <SlBasket color="black"  className=' cursor-pointer w-10 h-10 absolute object-cover top-3 right-5 bg-white rounded-full p-2' />
+          <SlBasket color="black" onClick={() => handleAddToCart(item)} className=' cursor-pointer w-10 h-10 absolute object-cover top-3 right-5 bg-white rounded-full p-2' />
 
             <Image
               width={400}
