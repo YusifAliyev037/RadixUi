@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { Box } from '@radix-ui/themes';
+import Image from 'next/image';
 
 
 interface Props {
@@ -27,13 +28,13 @@ export const Navbar = ({
             onClick={onClickClose}
             className="mb-10 right-5 sm:left-0"
           >
-            {/* <Image
+            <Image
               className="rounded-full absolute sm:left-0 top-9 w-7 h-7 cursor-pointer"
               alt="close-icon"
               height={10}
               width={10}
               src='/blackClose.svg'
-            /> */}
+            />
           </button>
         </Box>
         
