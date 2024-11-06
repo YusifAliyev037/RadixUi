@@ -5,6 +5,15 @@ import React from 'react'
 import { SlBasket } from "react-icons/sl";
 import { useDispatch } from "react-redux";
 
+type Product = {
+    id: number;
+    img: string;
+    name: string;
+    price: string;
+    disPrice: string;
+    desc: string;
+  };
+
 const products = [
     {id:1,img:"/cup.jpg", name:'Ceramic Cup',  price:'$237.00', disPrice:'$189.00', desc:'The best Ceramic Cup'},
     {id:2,img:"/planter.jpg", name:'Ceramic Cup',  price:'$237.00', disPrice:'$189.00', desc:'The best Ceramic Cup'},
@@ -23,9 +32,9 @@ function Cards() {
 
     const dispatch = useDispatch()
 
-    const handleAddToCart = (item: any) => {
-        const dataToDispatch = { id: item.id, name: item.name, price: item.price }; // or use `{...item}` if you've updated the Redux slice to accept objects
-        console.log("Adding to cart:", dataToDispatch); // Log the item data being added
+    const handleAddToCart = (item: Product) => {
+        const dataToDispatch = { id: item.id, image:item.img, name: item.name, price: item.disPrice }; 
+        console.log("Adding to cart:", dataToDispatch); 
         dispatch(fillData(dataToDispatch));
     };
   return (

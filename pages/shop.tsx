@@ -14,7 +14,7 @@ function shop() {
   </Head>
   <div>
     <Header/>
-    <div className='mt-20 mx-32'>
+    <div className='mt-20 md:mx-32 mx-4'>
       <h1 className='font-times text-mainColor text-4xl mb-10'>Shop</h1>
       <hr className='mb-20'/>
       <Cards/>

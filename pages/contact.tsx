@@ -19,27 +19,27 @@ function contatct() {
   <div>
     <Header/>
   </div>
-  <div className="bg-mainColor flex justify-between px-32 py-20">
+  <div className="bg-mainColor flex md:flex-row flex-col justify-between md:px-32 md:py-20 px-4 py-5">
         <div className="flex flex-col gap-6">
           <div>
-            <h1 className="text-white text-7xl font-times mt-32">
+            <h1 className="text-white text-7xl font-times md:mt-32 mt-7 md:text-left text-center">
               Contact Us
             </h1>
             </div>
-          <div className="text-white font-times text-xl mr-32">Welcome to the world of CeramicShop, where artistry and innovation come together to craft stunning ceramic pieces. Discover our story, the passion that drives us, and our commitment to delivering timeless beauty and quality.</div>
+          <div className="text-white font-times text-xl md:mr-32 md:mb-0 mb-5 md:text-left text-center">Welcome to the world of CeramicShop, where artistry and innovation come together to craft stunning ceramic pieces. Discover our story, the passion that drives us, and our commitment to delivering timeless beauty and quality.</div>
           
         </div>
         <div>
           <Image alt="main" src='/vase.jpg' width={600} height={600}/>
         </div>
       </div>
-      <div className='mt-20 mx-32 flex justify-between '>
-        <div className='flex flex-col gap-12'>
+      <div className='md:mt-20 md:mx-32 mx-4 mt-7 md:flex justify-between '>
+        <div className='flex flex-col gap-12 md:mb-0 mb-7'>
           <div>
-            <h2 className='font-times text-mainColor text-5xl'>Get in touch</h2>
-            <p>Share some details here.</p>
-            <p>This is Flexible section where you can share anything you want.</p>
-            <p>It could be details or some information.</p>
+            <h2 className='font-times text-mainColor text-5xl md:text-left text-center'>Get in touch</h2>
+            <p className='md:text-left text-center'>Share some details here.</p>
+            <p className='md:text-left text-center'>This is Flexible section where you can share anything you want.</p>
+            <p className='md:text-left text-center'>It could be details or some information.</p>
           </div>
           <div>
             <div className='flex gap-2'>
@@ -79,12 +79,12 @@ function contatct() {
         <Form.Root>
             <Form.Field name="name" className='flex flex-col'>
               <Form.Label className='mb-3'>Full name</Form.Label>
-              <div className='flex justify-center gap-8'>
+              <div className='md:flex justify-center gap-8'>
               <Form.Control asChild>
-                <input className="w-60 h-12 p-2" type="text" placeholder='Name' required />
+                <input className="md:w-60 w-full h-12 p-2 md:mb-0 mb-5" type="text" placeholder='Name' required />
               </Form.Control>
               <Form.Control asChild>
-                <input className="w-60 h-12 p-2" type="text" placeholder='Last Name' required />
+                <input className="md:w-60 w-full h-12 p-2" type="text" placeholder='Last Name' required />
               </Form.Control>
               </div>
             </Form.Field>

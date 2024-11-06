@@ -39,10 +39,10 @@ export const Navbar = ({
         </Box>
         
         <ul className='flex flex-col gap-5 mt-7'>
-          <li onClick={() => push("/")} className='text-black10 text-xl font-semibold cursor-pointer hover:text-maincolor'>Əsas</li>
-          <li onClick={() => push("/tickets")} className='text-black10 text-xl font-semibold cursor-pointer hover:text-maincolor'>Biletlər</li>
-          <li onClick={() => push("/visa")} className='text-black10 text-xl font-semibold cursor-pointer hover:text-maincolor'>Viza</li>
-          <li onClick={() => push("/transfer")} className='text-black10 text-xl font-semibold cursor-pointer hover:text-maincolor'>Transfer</li>
+          <li onClick={() => push("/")} className='text-black10 text-xl font-semibold cursor-pointer hover:text-maincolor'>Home</li>
+          <li onClick={() => push("/about")} className='text-black10 text-xl font-semibold cursor-pointer hover:text-maincolor'>About</li>
+          <li onClick={() => push("/shop")} className='text-black10 text-xl font-semibold cursor-pointer hover:text-maincolor'>Shop</li>
+          <li onClick={() => push("/contact")} className='text-black10 text-xl font-semibold cursor-pointer hover:text-maincolor'>Contact</li>
         </ul>
       </div>
     </div>
